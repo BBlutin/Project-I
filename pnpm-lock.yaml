@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^2.0.13
   '@portabletext/react': ^2.0.0
   '@sanity/eslint-config-studio': 2.0.1
   '@sanity/image-url': ^1.0.1
@@ -23,6 +24,7 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
+  '@heroicons/react': 2.0.13_react@18.2.0
   '@portabletext/react': 2.0.0_react@18.2.0
   '@sanity/image-url': 1.0.1
   '@sanity/vision': 3.1.2_23mhwjhnzfjwvdn7ol54k26zom
@@ -1525,6 +1527,14 @@ packages:
       '@floating-ui/dom': 1.1.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@heroicons/react/2.0.13_react@18.2.0:
+    resolution: {integrity: sha512-iSN5XwmagrnirWlYEWNPdCDj9aRYVD/lnK3JlsC9/+fqGF80k8C7rl+1HCvBX0dBoagKqOFBs6fMhJJ1hOg1EQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
