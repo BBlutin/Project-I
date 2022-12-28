@@ -5,8 +5,15 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'body': ['Poppins'],
+        'title': ['Rajdhani'],
+        'heading': ['Druk Wide Web']
+      }
+    },
   },
   plugins: [],
 }
