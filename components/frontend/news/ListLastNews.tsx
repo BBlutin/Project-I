@@ -1,32 +1,42 @@
 import Link from "next/link"
 import Image from "next/image"
+import urlFor from "../../../lib/urlFor";
 
-function ListLastNews() {
+type Props = {
+    posts: Post[];
+}
+
+function ListLastNews({posts}: Props) {
   return (
     <div className="mb-12 xl:mb-16">
-        <div className="max-w-7xl mx-auto px-4 pt-8 xl:pt-12">
+        <div className="container pt-8 xl:pt-12">
             <div className="flex flex-wrap w-full mx-auto">
                 <div className="md:px-2 mb-4 w-full h-[34rem] md:w-2/3">
-                    <article className="articleCard">
+                    <article className="cursor-pointer articleCard group">
                         {/* Background */}
                         <Link href='/' className="absolute inset-0 z-0">
-                            <div className="w-full h-full object-cover object-center relative bg-neutral-100 dark:bg-neutral-700">
-                                {/* Image */}
+                            <div className="cardBg">
+                                <Image
+                                    className="object-cover object-center"
+                                    src={urlFor(posts[0]?.mainImage).url()}
+                                    alt={posts[0]?.title}
+                                    fill
+                                />
                             </div>
                         </Link>
                         {/* Title */}
-                        <div className="absolute z-10 p-6 xl:pr-12 max-w-4xl top-0 pointer-events-none">
-                            <h3 className="block text-sm xl:text-base font-medium">
-                                BLK vous présente
+                        <div className="absolute top-0 z-10 max-w-4xl p-6 pointer-events-none xl:pr-12">
+                            <h3 className="block text-sm font-medium text-neutral-50 xl:text-base">
+                                {posts[0]?.subTitle}
                             </h3>
-                            <h1 className="block text-lg md:text-xl xl:text-2xl font-heading uppercase font-bold mt-1">
-                                Notre roster opentour 2023
+                            <h1 className="block mt-1 text-xl font-bold uppercase text-neutral-50 xl:text-2xl font-heading">
+                                {posts[0]?.title}
                             </h1>
                         </div>
                         {/* CTA */}
                         <div className="absolute z-10 p-6 pb-8">
                             <Link 
-                                className="button bg-neutral-50 font-medium text-sm text-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-300 focus:ring-neutral-500 px-5 rounded-lg py-3"
+                                className="px-5 py-3 text-sm font-medium rounded-lg button bg-neutral-50 text-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-300 focus:ring-neutral-500"
                                 href='/'
                             >
                                 En savoir plus
@@ -38,15 +48,15 @@ function ListLastNews() {
                     <article className="articleCard">
                         {/* Background */}
                         <Link href='/' className="absolute inset-0 z-0">
-                            <div className="w-full h-full object-cover object-center relative bg-neutral-100 dark:bg-neutral-700">
+                            <div className="relative object-cover object-center w-full h-full bg-neutral-100 dark:bg-neutral-700">
                                 {/* Image */}
                             </div>
                         </Link>
                         {/* Title */}
-                        <div className="absolute z-10 p-6 xl:pr-12 max-w-4xl top-0 pointer-events-none">
-                            <h3 className="block text-sm md:text-base xl:text-lg font-semibold">
+                        <div className="absolute top-0 z-10 max-w-4xl p-6 pointer-events-none xl:pr-12">
+                            <h3 className="block text-sm font-semibold md:text-base xl:text-lg">
                             </h3>
-                            <h1 className="block text-lg md:text-xl xl:text-2xl font-title uppercase"></h1>
+                            <h1 className="block text-lg uppercase md:text-xl xl:text-2xl font-title"></h1>
                         </div>
                         {/* CTA */}
                         <div className="absolute z-10 p-6">
@@ -58,14 +68,14 @@ function ListLastNews() {
                     <article className="articleCard">
                         {/* Background */}
                         <Link href='/' className="absolute inset-0 z-0">
-                            <div className="w-full h-full object-cover object-center relative bg-neutral-100 dark:bg-neutral-700">
+                            <div className="relative object-cover object-center w-full h-full bg-neutral-100 dark:bg-neutral-700">
                                 {/* Image */}
                             </div>
                         </Link>
                         {/* Title */}
-                        <div className="absolute z-10 p-6 xl:pr-12 max-w-4xl top-0 pointer-events-none">
-                            <h3 className="block text-sm md:text-base xl:text-lg font-semibold"></h3>
-                            <h1 className="block text-lg md:text-xl xl:text-2xl font-title uppercase"></h1>
+                        <div className="absolute top-0 z-10 max-w-4xl p-6 pointer-events-none xl:pr-12">
+                            <h3 className="block text-sm font-semibold md:text-base xl:text-lg"></h3>
+                            <h1 className="block text-lg uppercase md:text-xl xl:text-2xl font-title"></h1>
                         </div>
                         {/* CTA */}
                         <div className="absolute z-10 p-6">
@@ -77,14 +87,14 @@ function ListLastNews() {
                     <article className="articleCard">
                         {/* Background */}
                         <Link href='/' className="absolute inset-0 z-0">
-                            <div className="w-full h-full object-cover object-center relative bg-neutral-100 dark:bg-neutral-700">
+                            <div className="relative object-cover object-center w-full h-full bg-neutral-100 dark:bg-neutral-700">
                                 {/* Image */}
                             </div>
                         </Link>
                         {/* Title */}
-                        <div className="absolute z-10 p-6 xl:pr-12 max-w-4xl top-0 pointer-events-none">
-                            <h3 className="block text-sm md:text-base xl:text-lg font-semibold"></h3>
-                            <h1 className="block text-lg md:text-xl xl:text-2xl font-title uppercase"></h1>
+                        <div className="absolute top-0 z-10 max-w-4xl p-6 pointer-events-none xl:pr-12">
+                            <h3 className="block text-sm font-semibold md:text-base xl:text-lg"></h3>
+                            <h1 className="block text-lg uppercase md:text-xl xl:text-2xl font-title"></h1>
                         </div>
                         {/* CTA */}
                         <div className="absolute z-10 p-6">

@@ -1,10 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@headlessui/react': ^1.7.7
   '@heroicons/react': ^2.0.13
   '@portabletext/react': ^2.0.0
   '@sanity/eslint-config-studio': 2.0.1
   '@sanity/image-url': ^1.0.1
+  '@sanity/preview-kit': ^1.2.14
   '@sanity/vision': ^3.1.2
   '@types/node': 18.11.3
   '@types/react': 18.0.21
@@ -25,9 +27,11 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
+  '@headlessui/react': 1.7.7_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.13_react@18.2.0
   '@portabletext/react': 2.0.0_react@18.2.0
   '@sanity/image-url': 1.0.1
+  '@sanity/preview-kit': 1.2.14_react@18.2.0
   '@sanity/vision': 3.1.2_23mhwjhnzfjwvdn7ol54k26zom
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   next-sanity: 3.1.8_popsz64czlpbt2y2i3442q3xdy
@@ -1527,6 +1531,18 @@ packages:
       react-dom: '>=16.8.0'
     dependencies:
       '@floating-ui/dom': 1.1.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@headlessui/react/1.7.7_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-BqDOd/tB9u2tA0T3Z0fn18ktw+KbVwMnkxxsGPIH2hzssrQhKB5n/6StZOyvLYP/FsYtvuXfi9I0YowKPv2c1w==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false

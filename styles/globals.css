@@ -232,10 +232,22 @@ font-face {
     body {
         @apply antialiased
     }
+    .container {
+        @apply mx-auto px-4
+    }
+    .header {
+        transition-property: background, height;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
     .navLink {
-        @apply transition-all duration-300  hidden md:block w-full md:w-min p-[6px] focus:outline-none rounded-md hover:bg-neutral-900 focus:bg-neutral-900 hover:bg-opacity-5 dark:hover:bg-neutral-50 dark:focus:bg-neutral-50 dark:hover:bg-opacity-20 dark:focus:bg-opacity-20 font-medium
+        transition-property: background;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @apply !duration-300 hidden md:block w-full md:w-min p-[6px] focus:outline-none rounded-md hover:bg-neutral-900 focus:bg-neutral-900 hover:bg-opacity-5 dark:hover:bg-neutral-50 dark:focus:bg-neutral-50 dark:hover:bg-opacity-20 dark:focus:bg-opacity-20 font-medium
     }
     .articleCard {
         @apply w-full relative rounded-xl flex items-end h-full overflow-hidden
+    }
+    .cardBg {
+        @apply relative object-cover object-center w-full h-full transition-all duration-300 ease-out bg-neutral-100 dark:bg-neutral-700 drop-shadow-xl group-hover:scale-105
     }
 };

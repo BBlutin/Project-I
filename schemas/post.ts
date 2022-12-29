@@ -20,6 +20,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'subTitle',
+      title: 'Sub-Title',
+      type: 'string',
+    }),
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
@@ -54,6 +59,7 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
+      subTitle: 'subTitle',
       author: 'author.name',
       media: 'mainImage',
     },
