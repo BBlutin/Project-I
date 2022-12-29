@@ -10,9 +10,9 @@ export default function CustomStudioHead() {
       <title>BLK Studio</title>
       <link
         rel="icon"
-        type="image/png"
+        type="image/svg"
         sizes="32x32"
-        href="/images/logo-blk.png"
+        href="/images/logo.svg"
       />
     </>
   )

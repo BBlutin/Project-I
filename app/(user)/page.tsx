@@ -6,13 +6,33 @@ import ListLastNews from '../../components/frontend/news/ListLastNews'
 import PreviewBanner from '../../components/frontend/global/preview/PreviewBanner'
 import PreviewSuspense from '../../components/frontend/global/preview/PreviewSuspense'
 import PreviewListLastNews from '../../components/frontend/global/preview/PreviewListLastNews'
+import ListCarouselProducts from '../../components/frontend/products/ListCarouselProducts'
+
+const postQuery = groq`
+  *[_type=='post'] {
+    ...
+  } | order(_createdAt desc)
+`
+
+const productQuery = groq`
+  *[_type=='product'] {
+    ...,
+    variants[]->,
+    categories[]->,
+    sizes[]
+  } | order(_createdAt desc)
+`
 
 const query = groq`
-  *[_type=='post'] {
-    ...,
-    author->,
-    categories[]->
-  } | order(_createdAt desc)
+  {
+    'post': *[_type=='post'] | order(_createdAt desc) {...},
+    'product': *[_type=='product'] | order(_createdAt desc) {
+      ...,
+      variants[]->,
+      categories[]->,
+      sizes[]
+    }
+  }
 `
 
 async function HomePage() {
@@ -27,20 +47,21 @@ async function HomePage() {
         </div>
       )}>
         <PreviewBanner />
-        <PreviewListLastNews query={query} />
+        <PreviewListLastNews query={postQuery} />
         <NewsletterForm />
 
       </PreviewSuspense>
     )
   }
 
-  const posts = await client.fetch(query)
+  const result = await client.fetch(query)
 
   return (
-    <>
-      <ListLastNews posts={posts}/>
+    <div className='pt-24'>
+      <ListLastNews posts={result.post}/>
+      <ListCarouselProducts products={result.product} />
       <NewsletterForm />
-    </>
+    </div>
   )
 }
 

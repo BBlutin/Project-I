@@ -12,13 +12,16 @@
     "@sanity/image-url": "^1.0.1",
     "@sanity/preview-kit": "^1.2.14",
     "@sanity/vision": "^3.1.2",
-    "next": "latest",
+    "@stripe/stripe-js": "^1.46.0",
+    "embla-carousel-react": "^7.0.5",
+    "next": "^13.1.1",
     "next-sanity": "^3.1.8",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "^18.2.0",
     "sanity": "^3.1.2",
+    "stripe": "^11.5.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

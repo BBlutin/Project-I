@@ -10,10 +10,10 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className='transition-all duration-500 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 font-body'>
+      <body className='transition-all duration-500 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50'>
         <Providers>
           <Header />
-          <main className='font-body'>
+          <main className='overflow-hidden font-body'>
             {children}
           </main>
         </Providers>

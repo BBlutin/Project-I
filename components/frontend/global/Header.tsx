@@ -13,10 +13,10 @@ function Header() {
     const [fixedHeader, setFixedHeader] = useState(false);
     useEffect(() => {
         const listener = () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 100) {
                 setAnimateHeader(true)
             } else setAnimateHeader(false)
-            if (window.scrollY > 80) {
+            if (window.scrollY > 150) {
                 setFixedHeader(true)
             } else setFixedHeader(false)
         };
@@ -27,13 +27,13 @@ function Header() {
     }, []);
 
     return (
-        <header className={`top-0 left-0 -translate-y-20 w-full mx-auto max-w-[1680px] z-40 md:mb-2 backdrop-blur-sm backdrop-filter md:backdrop-filter-none bg-neutral-50/90 dark:bg-neutral-900/90 duration-500 ${animateHeader ? "fixed" : "relative -translate-y-0"} ${fixedHeader ? "translate-y-0" :''}`}>
-            <div className="relative flex-wrap items-center hidden px-4 py-2 md:flex md:px-6 md:pt-2 md:pb-0">
+        <header className={`top-0 left-0 fixed w-full z-40 md:mb-2 pb-2 backdrop-blur-sm backdrop-filter md:backdrop-filter-none bg-neutral-50/90 dark:bg-neutral-900/90 duration-500 `}>
+            <div className="container relative flex-wrap items-center hidden px-4 md:flex md:px-6 md:pt-2 md:pb-0">
                 <Link className="mr-6" href='/'>
-                    <Image src={'/images/logo-blk.png'} width={40} height={40} alt="Logo BLK"/>
+                    <Image src={'/images/logo.svg'} width={50} height={50} alt="Logo BLK"/>
                 </Link>
                 <nav className="mr-auto">
-                    <ul className="flex flex-wrap items-center gap-3 text-base">
+                    <ul className="flex flex-wrap items-center gap-6 text-sm uppercase font-heading">
                         <li className="pb-2 list-none md:relative whitespace-nowrap md:mt-4 md:pb-4">
                             <Link className="navLink" href='/'>
                                 Esport

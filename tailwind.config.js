@@ -12,6 +12,9 @@ module.exports = {
         'body': ['Poppins'],
         'title': ['Rajdhani'],
         'heading': ['Druk Wide Web']
+      },
+      colors: {
+        'primary': '#651e38'
       }
     },
   },

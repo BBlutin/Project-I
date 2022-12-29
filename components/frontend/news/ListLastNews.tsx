@@ -8,8 +8,8 @@ type Props = {
 
 function ListLastNews({posts}: Props) {
   return (
-    <div className="mb-12 xl:mb-16">
-        <div className="container pt-8 xl:pt-12">
+    <div className="mb-24 xl:mb-32">
+        <div className="container pt-8">
             <div className="flex flex-wrap w-full mx-auto">
                 <div className="md:px-2 mb-4 w-full h-[34rem] md:w-2/3">
                     <article className="cursor-pointer articleCard group">

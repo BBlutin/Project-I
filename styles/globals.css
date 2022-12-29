@@ -227,22 +227,32 @@ font-face {
     font-display: swap;
 }
 
+:root {
+    --card-fg-color: #fff;
+}
 
 @layer base {
-    body {
-        @apply antialiased
+    * {
+        @apply subpixel-antialiased
     }
+
     .container {
         @apply mx-auto px-4
     }
-    .header {
-        transition-property: background, height;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
     .navLink {
-        transition-property: background;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        @apply !duration-300 hidden md:block w-full md:w-min p-[6px] focus:outline-none rounded-md hover:bg-neutral-900 focus:bg-neutral-900 hover:bg-opacity-5 dark:hover:bg-neutral-50 dark:focus:bg-neutral-50 dark:hover:bg-opacity-20 dark:focus:bg-opacity-20 font-medium
+        @apply hidden subpixel-antialiased relative md:block w-full md:w-min p-[6px] rounded-md after:bg-[#651e38]
+    }
+    .navLink:after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        transition: all 0.4s ease-in-out;
+    }
+    .navLink:hover:after {
+        width: 100%;
     }
     .articleCard {
         @apply w-full relative rounded-xl flex items-end h-full overflow-hidden

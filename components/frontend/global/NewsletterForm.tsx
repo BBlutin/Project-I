@@ -6,7 +6,7 @@ function NewsletterForm() {
         <div className="flex flex-col justify-between rounded-lg shadow align-center bg-neutral-50 md:flex-row dark:bg-neutral-800">
             <div className="flex flex-col justify-center py-10 pl-10">
                 <div className="z-10 flex items-center w-full bg-opacity-0 md:rounded-lg bg-grey-100 ">
-                    <h1 className="text-3xl text-transparent uppercase font-heading bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400">
+                    <h1 className="text-3xl text-transparent uppercase font-heading bg-clip-text bg-gradient-to-r from-[#651e38] to-rose-600">
                         Rejoins le club
                     </h1>
                 </div>
