@@ -25,6 +25,8 @@ function ListCarouselProducts({products}: Props) {
     if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
 
+  console.log(products)
+
   return (
     <div className='container mb-24 xl:mb-32'>
       <div className='w-full'>
@@ -43,12 +45,22 @@ function ListCarouselProducts({products}: Props) {
         <div className='relative'>
           <div className="slider__viewport" ref={emblaRef}>
             <div className="flex -mx-1">
-              {products.map((product, index) => { return (
+              {products.map((product, index) => { 
+                
+                let inStock = false
+
+                product.sizes.map((size) => {
+                    if(size.quantity > 0) {
+                      inStock = true
+                    }
+                })
+
+                return (
                   <div className="relative flex-none" key={index}>
                     <div className='block w-40 h-full px-2 rounded-lg group md:w-80 md:px-3'>
                       <div className='block w-full md:whitespace-nowrap'>
                         <div className='relative h-80'>
-                          <Link href={`/`}>
+                          <Link href={`/products/${product.slug.current}`}>
                             <div className='w-full h-full transition-all duration-[400ms] ease-out rounded-md bg-neutral-200 dark:bg-neutral-700 group-hover:bg-neutral-700 dark:group-hover:bg-neutral-300'>
                               <Image
                                 className="object-cover object-center"
@@ -59,8 +71,9 @@ function ListCarouselProducts({products}: Props) {
                             </div>
                           </Link>
                           {/* Quick add */}
+                          {!inStock && <span className='absolute p-2 text-xs uppercase top-3 right-3 rounded-xl bg-primary/90'>Rupture</span>}
                         </div>
-                        <Link href={`/`}>
+                        <Link href={`/products/${product.slug.current}`}>
                           <span className='block mt-2 text-sm font-medium'>
                             {product.name}
                           </span>

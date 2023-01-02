@@ -5,6 +5,7 @@ import {schemaTypes} from './schemas'
 import { myTheme } from './theme'
 import StudioNavbar from './components/backend/StudioNavbar'
 import Logo from './components/backend/Logo'
+import { getDefaultDocumentNode } from './structure'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!
@@ -15,7 +16,10 @@ export default defineConfig({
   title: 'BLK Studio',
   projectId,
   dataset,
-  plugins: [deskTool(), visionTool()],
+  plugins: [
+    deskTool(),
+    visionTool()
+  ],
   schema: {
     types: schemaTypes,
   },
