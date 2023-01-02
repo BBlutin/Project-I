@@ -73,3 +73,8 @@ interface Title {
     _type: "string";
     current: string;
 }
+
+type SocialLogo = {
+    name: string;
+    link: string;
+}

@@ -2,29 +2,9 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
-import CartButton from "./CartButton"
-import DarModeButton from "./DarkModeButton"
-import SearchButton from "./SearchButton"
+import { CartButton, DarkModeButton, SearchButton } from '../../frontend'
 
 function Header() {
-
-    const [animateHeader, setAnimateHeader] = useState(false);
-    const [fixedHeader, setFixedHeader] = useState(false);
-    useEffect(() => {
-        const listener = () => {
-            if (window.scrollY > 100) {
-                setAnimateHeader(true)
-            } else setAnimateHeader(false)
-            if (window.scrollY > 150) {
-                setFixedHeader(true)
-            } else setFixedHeader(false)
-        };
-        window.addEventListener('scroll', listener)
-        return () => {
-            window.removeEventListener('scroll', listener)
-        };
-    }, []);
 
     return (
         <header className={`top-0 left-0 fixed w-full z-40 md:mb-2 pb-2 backdrop-blur-sm backdrop-filter md:backdrop-filter-none bg-neutral-50/90 dark:bg-neutral-900/90 duration-500 `}>
@@ -60,7 +40,7 @@ function Header() {
                 <div className="flex flex-wrap items-center w-auto gap-6 ml-auto">
                     <SearchButton />
                     <CartButton />
-                    <DarModeButton />
+                    <DarkModeButton />
                 </div>
             </div>
         </header>

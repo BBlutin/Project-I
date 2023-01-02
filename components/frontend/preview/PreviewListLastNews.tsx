@@ -1,7 +1,7 @@
 "use client"
 
-import { usePreview } from "../../../../lib/sanity.preview"
-import ListLastNews from "../../news/ListLastNews"
+import { usePreview } from "../../../lib/sanity.preview"
+import ListLastNews from "../news/ListLastNews"
 
 type Props = {
     query: string;

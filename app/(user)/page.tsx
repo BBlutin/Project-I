@@ -1,12 +1,8 @@
 import { previewData } from 'next/headers'
 import { groq } from 'next-sanity'
 import { client } from '../../lib/sanity.client'
-import NewsletterForm from '../../components/frontend/global/NewsletterForm'
-import ListLastNews from '../../components/frontend/news/ListLastNews'
-import PreviewBanner from '../../components/frontend/global/preview/PreviewBanner'
-import PreviewSuspense from '../../components/frontend/global/preview/PreviewSuspense'
-import PreviewListLastNews from '../../components/frontend/global/preview/PreviewListLastNews'
-import ListCarouselProducts from '../../components/frontend/products/ListCarouselProducts'
+import { NewsletterForm, ListLastNews, ListCarouselProducts } from '../../components/frontend'
+import { PreviewBanner, PreviewSuspense, PreviewListLastNews } from '../../components/frontend/preview'
 
 const postQuery = groq`
   *[_type=='post'] {
@@ -49,7 +45,6 @@ async function HomePage() {
         <PreviewBanner />
         <PreviewListLastNews query={postQuery} />
         <NewsletterForm />
-
       </PreviewSuspense>
     )
   }

@@ -1,6 +1,6 @@
-import Header from '../../components/frontend/global/Header'
 import '../../styles/globals.css'
 import Providers from '../Providers'
+import { Header, Footer } from '../../components/frontend'
 
 export default function RootLayout({
   children,
@@ -16,6 +16,7 @@ export default function RootLayout({
           <main className='overflow-hidden font-body'>
             {children}
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>

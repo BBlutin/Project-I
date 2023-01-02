@@ -1,0 +1,8 @@
+export { default as Header } from './global/Header'
+export { default as Footer } from './global/Footer'
+export { default as CartButton } from './global/CartButton'
+export { default as DarkModeButton } from './global/DarkModeButton'
+export { default as NewsletterForm } from './global/NewsletterForm'
+export { default as SearchButton } from './global/SearchButton'
+export { default as ListLastNews } from './news/ListLastNews'
+export { default as ListCarouselProducts } from './products/ListCarouselProducts'

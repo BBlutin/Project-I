@@ -23,6 +23,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-is: ^18.2.0
+  react-svg: ^15.1.17
   sanity: ^3.1.2
   stripe: ^11.5.0
   styled-components: ^5.3.6
@@ -44,6 +45,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-is: 18.2.0
+  react-svg: 15.1.17_biqbaboplfbrettd7655fr4n2y
   sanity: 3.1.2_p23jbvodnjizffag2splj73uhe
   stripe: 11.5.0
   styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
@@ -2340,6 +2342,14 @@ packages:
       tslib: 2.4.1
     dev: false
 
+  /@tanem/svg-injector/10.1.41:
+    resolution: {integrity: sha512-MtZdUYVwl2Fcqjwh/Jl8IGU59Uj++34LkLuAJcsTaxqYXiqAISFmjYtOOnFf6g+4Lwmfcnuns3fX4eYuyssPxg==}
+    dependencies:
+      '@babel/runtime': 7.20.7
+      content-type: 1.0.4
+      tslib: 2.4.1
+    dev: false
+
   /@tanstack/react-virtual/3.0.0-beta.29_react@18.2.0:
     resolution: {integrity: sha512-Vwjh/h9J4W6qtlQ7nPmhT6bXueS4mDMXJxJM2lRU6KPGwlWezKp/3NI4ZLAgDqZIxDOkeXq9iERsNxyB7MKHNg==}
     peerDependencies:
@@ -3182,6 +3192,11 @@ packages:
     resolution: {integrity: sha512-8LfFpbF/BczoxPwo2oltto5bph8bJkGOATXsg3E9ddMJOGnWJciKHldx2zDj5XIBflaKzPfVCjOTl6tMh7lErg==}
     dependencies:
       simple-wcswidth: 1.0.1
+    dev: false
+
+  /content-type/1.0.4:
+    resolution: {integrity: sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==}
+    engines: {node: '>= 0.6'}
     dev: false
 
   /convert-source-map/1.9.0:
@@ -6173,6 +6188,20 @@ packages:
     resolution: {integrity: sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==}
     dependencies:
       prop-types: 15.8.1
+    dev: false
+
+  /react-svg/15.1.17_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-/nMbW3nlj4v55PUkqveXRCNhh0Y+527hPJb8Pw1ubzbG+a9SOWEKw+DyDcYKMXwfg2cDUeG71M7XpP/yN0uemw==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.20.7
+      '@tanem/svg-injector': 10.1.41
+      '@types/prop-types': 15.7.5
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react/18.2.0:
