@@ -34,4 +34,4 @@ pnpm run start
 
 ## Accéder à l'application
 
-Une fois lancée, l'application est disponnible sur [`localhost:300`]('http://locahost:3000')
+Une fois lancée, l'application est disponnible sur [`localhost:3000`](http://locahost:3000)
