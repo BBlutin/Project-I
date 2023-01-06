@@ -31,3 +31,7 @@ Lancer le serveur de production :
 ```bash
 pnpm run start
 ```
+
+## Accéder à l'application
+
+Une fois lancée, l'application est disponnible sur [`localhost:300`]('http://locahost:3000')
