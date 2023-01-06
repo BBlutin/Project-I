@@ -1,27 +1,33 @@
-# Next.js + Tailwind CSS Example
+# Project I Website
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Next.js + Sanity.IO + Tailwind Full website with shop for Project I Esport team
 
-## Deploy your own
+## Environnement de DEV
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Créer et compléter le fichier `.env.local` à partir de `.env.schema`
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
+Installer les dépendances :
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+pnpm install
+```
+Lancer le serveur de développement :
+```bash
+pnpm run dev
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+## Environnement de Prod
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+Créer et compléter le fichier `.env.local` à partir de `.env.schema`
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Installer les dépendances :
+```bash
+pnpm install
+```
+Compiler l'application :
+```bash
+pnpm run build
+```
+Lancer le serveur de production :
+```bash
+pnpm run start
+```
