@@ -1,3 +1,325 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-ThinItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-BlackItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('/fonts/Rajdhani-Light.woff2') format('woff2'),
+        url('/fonts/Rajdhani-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-LightItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Black.woff2') format('woff2'),
+        url('/fonts/Poppins-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-ExtraBoldItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-MediumItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-SemiBoldItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Italic.woff2') format('woff2'),
+        url('/fonts/Poppins-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Light.woff2') format('woff2'),
+        url('/fonts/Poppins-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Thin.woff2') format('woff2'),
+        url('/fonts/Poppins-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Medium.woff2') format('woff2'),
+        url('/fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-ExtraLightItalic.woff2') format('woff2'),
+        url('/fonts/Poppins-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-ExtraLight.woff2') format('woff2'),
+        url('/fonts/Poppins-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.woff2') format('woff2'),
+        url('/fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('/fonts/Rajdhani-Bold.woff2') format('woff2'),
+        url('/fonts/Rajdhani-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-ExtraBold.woff2') format('woff2'),
+        url('/fonts/Poppins-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('/fonts/Rajdhani-Medium.woff2') format('woff2'),
+        url('/fonts/Rajdhani-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('/fonts/Rajdhani-Regular.woff2') format('woff2'),
+        url('/fonts/Rajdhani-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('/fonts/Rajdhani-SemiBold.woff2') format('woff2'),
+        url('/fonts/Rajdhani-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Wide Web';
+    src: url('/fonts/Druk-Wide-Web-Medium.woff2') format('woff2'),
+        url('/fonts/Druk-Wide-Web-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Wide Web';
+    src: url('/fonts/Druk-Wide-Web-Bold.woff2') format('woff2'),
+        url('/fonts/Druk-Wide-Web-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --card-fg-color: #fff;
+}
+
+@layer base {
+    * {
+        @apply subpixel-antialiased scroll-auto
+    }
+
+    .container {
+        @apply mx-auto px-4
+    }
+    .navLink {
+        @apply hidden subpixel-antialiased relative md:block w-full md:w-min p-[6px] rounded-md after:bg-[#651e38]
+    }
+    .navLink:after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        transition: all 0.4s ease-in-out;
+    }
+    .navLink:hover:after {
+        width: 100%;
+    }
+    .articleCard {
+        @apply w-full relative rounded-xl flex items-end h-full overflow-hidden
+    }
+    .cardBg {
+        @apply relative object-cover object-center w-full h-full transition-all duration-300 ease-out bg-neutral-100 dark:bg-neutral-700 drop-shadow-xl group-hover:scale-105
+    }
+    .productGallery {
+        height: calc(100vh - 250px);
+    }
+    .product__slide {
+        flex: 0 0 100%;
+        position: relative;
+    }
+    .product__container {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        margin-left: calc(1rem * -1);
+    }
+    .product-thumbs__viewport {
+        overflow: hidden;
+        @apply h-full
+    }
+    .product-thumbs__container {
+        display: flex;
+        flex-direction: row;
+        margin-left: calc(0.8rem * -1);
+        @apply h-full
+    }
+    .product-thumbs__slide {
+        flex: 0 0;
+        height: 100%;
+        min-width: 0;
+        padding-left: 0.8rem;
+        position: relative;
+        @apply basis-[45%] md:basis-[40%] lg:basis-[23%] xl:basis-[18%] 2xl:basis-[15%]
+    }
+    .product-thumbs__slide__button {
+        -webkit-appearance: none;
+        background-color: transparent;
+        touch-action: manipulation;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        opacity: 0.4;
+        transition: opacity 0.2s;
+        @apply rounded-lg h-full bg-neutral-200 dark:bg-neutral-700
+    }
+    .product-thumbs__slide--selected .product-thumbs__slide__button{
+        opacity: 1;
+    }
+    .product-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 130px;
+        align-self: flex-start;
+    }
+    .diagonal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 2px;
+        background: linear-gradient(to top left,transparent,transparent calc(50% - 0.8px),#dee1e3 50%,transparent calc(50% + 0.8px),transparent);
+    }
+};
