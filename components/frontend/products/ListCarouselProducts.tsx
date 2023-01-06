@@ -25,8 +25,6 @@ function ListCarouselProducts({products}: Props) {
     if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
 
-  console.log(products)
-
   return (
     <div className='container mb-24 xl:mb-32'>
       <div className='w-full'>
