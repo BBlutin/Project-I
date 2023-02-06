@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className='transition-all duration-500 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50'>
+      <body className=' bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50'>
         <ScrollToTop />
         <Providers>
           <main id="main">

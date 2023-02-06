@@ -69,7 +69,7 @@ function ListCarouselProducts({products}: Props) {
                             </div>
                           </Link>
                           {/* Quick add */}
-                          {!inStock && <span className='absolute p-2 text-xs uppercase top-3 right-3 rounded-xl bg-primary/90'>Rupture</span>}
+                          {!inStock && <span className='absolute p-2 text-xs uppercase text-neutral-50 top-3 right-3 rounded-xl bg-primary/90'>Rupture</span>}
                         </div>
                         <Link href={`/products/${product.slug.current}`}>
                           <span className='block mt-2 text-sm font-medium'>
