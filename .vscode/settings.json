@@ -15,5 +15,6 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.parameterTypes.enabled": true,
-  "typescript.inlayHints.parameterNames.enabled": "literals"
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "cSpell.words": ["portabletext"]
 }
