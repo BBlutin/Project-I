@@ -40,8 +40,8 @@ function ListCarouselProducts({ products }: Props) {
           </div>
         </div>
         <div className="relative">
-          <div className="slider__viewport" ref={emblaRef}>
-            <div className="flex -mx-1">
+          <div className="overflow-hidden slider__viewport" ref={emblaRef}>
+            <div className="flex md:-mx-1">
               {products.map((product, index) => {
                 let inStock = false;
 
@@ -52,8 +52,8 @@ function ListCarouselProducts({ products }: Props) {
                 });
 
                 return (
-                  <div className="relative flex-none" key={index}>
-                    <div className="block w-40 h-full px-2 rounded-lg group md:w-80 md:px-3">
+                  <div className="relative" key={index}>
+                    <div className="block h-full px-2 rounded-lg w-[17rem] group md:w-80 md:px-3">
                       <div className="block w-full md:whitespace-nowrap">
                         <div className="relative h-80">
                           <Link href={`/products/${product.slug.current}`}>

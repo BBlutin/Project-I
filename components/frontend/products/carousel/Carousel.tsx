@@ -46,7 +46,10 @@ const Carousel = ({ images, options }: Props) => {
   return (
     <>
       <div className="flex h-[60vh] md:h-[70vh] flex-col product-sticky">
-        <div className="overflow-hidden h-5/6" ref={emblaMainRef}>
+        <div
+          className="-mx-6 overflow-hidden h-5/6 bg-neutral-100 dark:bg-neutral-800 md:mx-0 md:bg-transparent"
+          ref={emblaMainRef}
+        >
           <div className="product__container">
             {images.map((image, index) => (
               <div className="product__slide" key={index}>
@@ -61,7 +64,7 @@ const Carousel = ({ images, options }: Props) => {
           </div>
         </div>
 
-        <div className="px-4 mt-2 md:mt-8 h-1/6">
+        <div className="mt-2 md:px-4 md:mt-8 h-1/6">
           <div className="product-thumbs__viewport" ref={emblaThumbsRef}>
             <div className="product-thumbs__container">
               {images.map((image, index) => (

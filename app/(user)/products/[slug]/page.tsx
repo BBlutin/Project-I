@@ -31,7 +31,7 @@ const ProductPage = async ({ params: { slug } }: Props) => {
         <div className="relative w-full md:w-1/2 lg:w-7/12 xl:w-7/12 md:px-4 xl:px-6 md:product-sticky">
           <ProductGallery images={product.image} />
         </div>
-        <div className="w-full pl-4 mt-4 md:pl-10 md:mt-0 md:w-1/2 lg:w-5/12 xl:w-5/12 md:pr-4 xl:pr-6">
+        <div className="w-full mt-4 md:pl-10 md:mt-0 md:w-1/2 lg:w-5/12 xl:w-5/12 md:pr-4 xl:pr-6">
           <ProductDescription product={product} />
         </div>
       </article>

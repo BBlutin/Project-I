@@ -42,7 +42,7 @@ const ProductDescription = ({ product }: Prop) => {
       <span className="block text-neutral-600 dark:text-neutral-400 mb-1.5 md:mb-2.5">
         {product.type}
       </span>
-      <h1 className="mb-1.5 md:mb-2.5 font-heading uppercase text-3xl font-bold">
+      <h1 className="mb-1.5 md:mb-2.5 font-heading uppercase text-xl md:text-3xl font-bold">
         {product.name}
       </h1>
       <div className="block text-neutral-600 dark:text-neutral-400 mb-1.5 md:mb-2.5">
