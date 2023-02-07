@@ -1,11 +1,11 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/24/solid"
+import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 function SearchButton() {
   return (
     <>
-        <MagnifyingGlassIcon className="w-7 h-7" />
+      <MagnifyingGlassIcon className="w-6 h-6 md:w-7 md:h-7" />
     </>
-  )
+  );
 }
 
-export default SearchButton
+export default SearchButton;
