@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { PortableText } from "@portabletext/react"
 import RichTextComponents from '../global/RichTextComponents';
+import urlFor from '../../../lib/urlFor';
 
 type Prop = {
     product: Product;
@@ -93,12 +94,26 @@ const ProductDescription = ({product} : Prop) => {
                     </>
                 )}
                 <div className='hidden w-full mt-5 md:block'>
-                    <button
-                        className={`w-full px-6 py-4 leading-tight transition-all duration-500 rounded-lg button ${status < 2 ? 'hover:bg-primary dark:hover:bg-primary dark:hover:text-white text-white bg-neutral-900 dark:bg-white dark:text-neutral-900' : 'text-neutral-200 bg-neutral-400 dark:text-neutral-600 dark:bg-neutral-400'}`}
-
-                    >
-                        {status < 2 ? 'Ajouter au panier' : 'En rupture'}
-                    </button>
+                    { status < 2 
+                        ? 
+                            <button
+                                className='w-full px-6 py-4 leading-tight text-white transition-all duration-500 rounded-lg snipcart-add-item button hover:bg-primary dark:hover:bg-primary dark:hover:text-white bg-neutral-900 dark:bg-white dark:text-neutral-900'
+                                data-item-id={product.slug}
+                                data-item-price={product.discount ? product.discount : product.price}
+                                data-item-description={product.sizes[0].name != 'none' ? `Taille: ${activeSize}` : product.desc}
+                                data-item-image={urlFor(product.image[0]).url()}
+                                data-item-name={product.name}
+                            >
+                                Ajouter au panier
+                            </button>
+                        :
+                            <button
+                                disabled
+                                className='w-full px-6 py-4 leading-tight transition-all duration-500 rounded-lg button text-neutral-200 bg-neutral-400 dark:text-neutral-600 dark:bg-neutral-400'
+                            >
+                                En rupture
+                            </button>
+                    }
                 </div>
             </div>
             <div className="my-7">

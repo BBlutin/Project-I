@@ -25,6 +25,7 @@
     "sanity-plugin-iframe-pane": "^2.1.1",
     "stripe": "^11.5.0",
     "styled-components": "^5.3.6",
+    "use-snipcart": "^1.2.0",
     "yet-another-react-lightbox": "^2.2.5"
   },
   "devDependencies": {
