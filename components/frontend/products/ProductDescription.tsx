@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
 import RichTextComponents from "../global/RichTextComponents";
+import urlFor from "../../../lib/urlFor";
 
 type Prop = {
   product: Product;
@@ -33,6 +34,7 @@ const ProductDescription = ({ product }: Prop) => {
         setStatus(2);
       }
     } else {
+      setActiveSize(product.sizes[0]._key);
       setSizes(true);
     }
   }, []);
@@ -107,15 +109,81 @@ const ProductDescription = ({ product }: Prop) => {
           </>
         )}
         <div className="hidden w-full mt-5 md:block">
-          <button
-            className={`w-full px-6 py-4 leading-tight transition-all duration-500 rounded-lg button ${
-              status < 2
-                ? "hover:bg-primary dark:hover:bg-primary dark:hover:text-white text-white bg-neutral-900 dark:bg-white dark:text-neutral-900"
-                : "text-neutral-200 bg-neutral-400 dark:text-neutral-600 dark:bg-neutral-400"
-            }`}
-          >
-            {status < 2 ? "Ajouter au panier" : "En rupture"}
-          </button>
+          {status < 2 ? (
+            <>
+              {product.sizes[0].name != "none" ? (
+                <>
+                  {true ? (
+                    <button
+                      className="w-full px-6 py-4 leading-tight text-white transition-all duration-500 rounded-lg snipcart-add-item button hover:bg-primary dark:hover:bg-primary dark:hover:text-white bg-neutral-900 dark:bg-white dark:text-neutral-900"
+                      data-item-id={product.slug.current}
+                      data-item-price={
+                        product.discount ? product.discount : product.price
+                      }
+                      data-item-description=""
+                      data-item-custom1-name="Taille"
+                      data-item-custom1-type="readonly"
+                      data-item-custom1-value={
+                        product.sizes.find(
+                          (size: any) => size._key === activeSize
+                        )?.name
+                      }
+                      data-item-image={urlFor(product.image[0]).url()}
+                      data-item-name={product.name}
+                      data-item-custom2-name="Flocage"
+                      data-item-custom3-name="Custom"
+                      data-item-custom3-type="hidden"
+                      data-item-custom3-value="Yes"
+                    >
+                      Ajouter au panier
+                    </button>
+                  ) : (
+                    <button
+                      className="w-full px-6 py-4 leading-tight text-white transition-all duration-500 rounded-lg snipcart-add-item button hover:bg-primary dark:hover:bg-primary dark:hover:text-white bg-neutral-900 dark:bg-white dark:text-neutral-900"
+                      data-item-id={product.slug.current}
+                      data-item-price={
+                        product.discount ? product.discount : product.price
+                      }
+                      data-item-description=""
+                      data-item-custom1-name="Taille"
+                      data-item-custom1-type="readonly"
+                      data-item-custom1-option="XS|S|M|L|XL|XXL"
+                      data-item-custom1-value={
+                        product.sizes.find(
+                          (size: any) => size._key === activeSize
+                        )?.name
+                      }
+                      data-item-image={urlFor(product.image[0]).url()}
+                      data-item-name={product.name}
+                      data-item-custom2-name="Flocage"
+                    >
+                      Ajouter au panier
+                    </button>
+                  )}
+                </>
+              ) : (
+                <button
+                  className="w-full px-6 py-4 leading-tight text-white transition-all duration-500 rounded-lg snipcart-add-item button hover:bg-primary dark:hover:bg-primary dark:hover:text-white bg-neutral-900 dark:bg-white dark:text-neutral-900"
+                  data-item-id={product.slug.current}
+                  data-item-price={
+                    product.discount ? product.discount : product.price
+                  }
+                  data-item-description=""
+                  data-item-image={urlFor(product.image[0]).url()}
+                  data-item-name={product.name}
+                >
+                  Ajouter au panier
+                </button>
+              )}
+            </>
+          ) : (
+            <button
+              disabled
+              className="w-full px-6 py-4 leading-tight transition-all duration-500 rounded-lg button text-neutral-200 bg-neutral-400 dark:text-neutral-600 dark:bg-neutral-400"
+            >
+              En rupture
+            </button>
+          )}
         </div>
       </div>
       <div className="my-7">
